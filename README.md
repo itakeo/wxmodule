@@ -4,8 +4,9 @@
 
 ![avatar](https://github.com/Takeos/wxmodule/blob/master/wxdemo2.gif)
 
-#倒计时。
-##调用组件
+# 倒计时。
+
+## 调用组件
 
 ```
 <countdown time="5000"></countdown>
@@ -24,8 +25,9 @@
 | bindend | 结束回调 | "" |
 
 
-#数字输入框。
-##调用组件
+# 数字输入框。
+
+## 调用组件
 ```
 <inputnum min="10" max="9999" value="1"></inputnum>
 ```
