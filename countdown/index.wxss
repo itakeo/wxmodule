@@ -1,0 +1,3 @@
+.countDownView{display: inline-block; line-height: 1}
+.countDownView text{padding: 0 3px;margin: 0 2px;}
+.countDownView view{display: inline-block;}

@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="inputNumView {{disabledOff ? 'disabled' : ''}}"> 
+	<view class="inputNum-plus {{minsNone ? 'none' : ''}}" data-type="mins" bindtap="setValue">-</view>
+	<input value="{{value}}" disabled="{{inpDisabledOff || disabledOff}}" data-type="inp"  bindchange="setValue" />
+	<view class="inputNum-mins {{plusNone ? 'none' : ''}}"  data-type="plus" bindtap="setValue">+</view>
+</view>
+
