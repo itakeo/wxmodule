@@ -2,19 +2,19 @@ Component({
     properties: {
         index: {
             type: Number,
-            value: 0,
+            value: 0
         },
         min: {
             type: Number,
-            value: 1,
+            value: 1
         },
         max: {
             type: Number,
-            value: 9999,
+            value: 9999
         },
         step: {
             type: Number,
-            value: 1,
+            value: 1
         },
         value: {
             type: Number,
@@ -47,18 +47,20 @@ Component({
         }
     },
     data: {
+        maxLen : 4,
         inpDisabledOff : 1,
         disabledOff : 0 ,
         minsNone : 0,
         plusNone : 0
     },
+    attached(){
+        this.setData({
+            maxLen:this.data.max.toString().length
+        });
+        this.checkFn(this.data.value);
+    },
     methods : {
-        setValue(e){
-            if(this.data.disabledOff) return;
-            let val =e.target.dataset.type==='inp' ? e.detail.value*1 : this.data.value*1;
-            if(e.target.dataset.type!='inp'){
-                val = e.target.dataset.type=='mins' ? val-this.data.step : val+this.data.step;
-            };
+        checkFn(val){
             if(val <= this.data.min ){
                 this.setData({
                     value : this.data.min
@@ -76,6 +78,14 @@ Component({
                 minsNone : val<=this.data.min,
                 plusNone: val>=this.data.max
             });
+        },
+        setValue(e){
+            if(this.data.disabledOff) return;
+            let val =e.target.dataset.type==='inp' ? e.detail.value*1 : this.data.value*1;
+            if(e.target.dataset.type!='inp'){
+                val = e.target.dataset.type=='mins' ? val-this.data.step : val+this.data.step;
+            };
+            this.checkFn(val);
         }
     }
 })
