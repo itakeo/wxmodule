@@ -4,6 +4,8 @@
 
 ![avatar](https://github.com/Takeos/wxmodule/blob/master/wxdemo2.gif)
 
+![avatar](https://github.com/Takeos/wxmodule/blob/master/wxdemo3.gif)
+
 # 倒计时。
 
 ## 调用组件
