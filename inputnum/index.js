@@ -16,6 +16,10 @@ Component({
             type: Number,
             value: 1
         },
+        maxlen: {
+            type: Number,
+            value: 4
+        },
         value: {
             type: Number,
             value: 1,
@@ -47,16 +51,12 @@ Component({
         }
     },
     data: {
-        maxLen : 4,
         inpDisabledOff : 1,
         disabledOff : 0 ,
         minsNone : 0,
         plusNone : 0
     },
     attached(){
-        this.setData({
-            maxLen:this.data.max.toString().length
-        });
         this.checkFn(this.data.value);
     },
     methods : {
