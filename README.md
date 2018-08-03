@@ -39,6 +39,7 @@
 | max | 最大值 | 9999 |
 | value | value值 | 1 |
 | step | 累加数值 | 1 |
+| maxlen | 最多输入位数 | 4 |
 | disabled | 禁止使用 | false |
 | inpDisabled | 输入框禁止输入	 | true |
 | index | 索引值 | 0 |
