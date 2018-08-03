@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="checkGroup"> 
+	<slot></slot>
+</view>
+

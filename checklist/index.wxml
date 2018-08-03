@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="checkListBox" > 
+	<view class="checkListTap" style="{{ position=='right' ? 'flex-direction:row-reverse' :''}};" bindtap="checkFn" >
+		<view  
+		style="background: {{ (checkedOff && !disabledOff) ? color : ''}};border: 1px solid {{ (checkedOff && !disabledOff) ? color : '#999'}};margin: {{margin}};" 
+		class="checkListView  {{type+'type'}}  {{checkedOff ? 'checked' : ''}} {{disabledOff ? 'disabled' : ''}} "></view>
+		<view style="text-align: {{algin}};"><slot></slot></view>
+	</view>
+</view>
+
