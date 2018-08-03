@@ -51,7 +51,7 @@
 {
     "usingComponents": {
         "countdown": "../countdown/index", //路径
-        "inputnum": "../inputNum/index"
+        "inputnum": "../inputnum/index"
     }
 }
 ```
