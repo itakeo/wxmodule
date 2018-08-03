@@ -45,6 +45,55 @@
 | index | 索引值 | 0 |
 | bindchange | 改变回调 | "" |
 
+
+# 单选框和复选框
+## 调用
+```
+<checklist value="1" checked="1" bindchange="changeFn">
+    <text>这里是显示的文字</text>
+</checklist>
+```
+>其他参数说明：
+
+| 参数 | 描述 | 默认值 |
+| ------ | ------ | ------ |
+| type | 设置大小，有s，m，l三种情况 | m |
+| index | 索引值 | 0 |
+| position | 设置控件的对齐。left和right两种 | left |
+| color | 设置颜色 | #FA7346 |
+| algin | 设置文字的对齐方式。left和right两种 | left |
+| margin | 设置控件距离文字的边距	 | 0 20rpx 0 0 |
+| disabled | 禁止使用 | false |
+| checked | 是否选中 | 0 |
+| value | 唯一值 | 0 |
+| bindchange | 改变回调 | "" |
+
+>以上参数中algin，margin也可通过内容直接修改。如下：
+
+```
+<checklist value="1" checked="1" bindchange="changeFn">
+    <view style="text-align: right;margin-left: 20px">可嵌套标签，赋值样式</view>
+</checklist>
+```
+
+>如果需要多个使用的话，用checkgroup组件包起来，如下：
+
+```
+<checkgroup bindchange="changeFn2">
+    <checklist value="{{item.value}}" index="{{index}}" disabled="{{item.disabled}}" checked="{{item.checked}}" wx:for="{{items}}" wx:key="{{index}}">{{item.title}}
+    </checklist>
+</checkgroup>  
+```
+>checkgroup组件有2个属性：
+
+| 参数 | 描述 | 默认值 |
+| ------ | ------ | ------ |
+| type | radio,check | check |
+| bindchange | 改变回调 | "" |
+
+>如果需要单选框的话，请在checkgroup设置type=”radio”
+
+
 >组件怎么使用？将组件文件放在项目中。然后再需要引入的页面.json文件里添加如下内容，如果需要修改样式，颜色请自己修改…..
 
 
@@ -52,6 +101,8 @@
 {
     "usingComponents": {
         "countdown": "../countdown/index", //路径
+        "inputnum": "../inputnum/index",
+        "checkgroup": "../checkgroup/index",
         "inputnum": "../inputnum/index"
     }
 }
