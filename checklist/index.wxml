@@ -4,7 +4,7 @@
 		<view  
 		style="background: {{ (checkedOff && !disabledOff) ? color : ''}};border: 1px solid {{ (checkedOff && !disabledOff) ? color : '#999'}};margin: {{margin}};" 
 		class="checkListView  {{type+'type'}}  {{checkedOff ? 'checked' : ''}} {{disabledOff ? 'disabled' : ''}} "></view>
-		<view style="text-align: {{algin}};"><slot></slot></view>
+		<view style="text-align: {{align}};"><slot></slot></view>
 	</view>
 </view>
 
