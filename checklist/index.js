@@ -21,7 +21,7 @@ Component({
             type : null,
             value : '#FA7346'
         },
-        algin :  {
+        align :  {
             type : null,
             value : 'left'
         },
