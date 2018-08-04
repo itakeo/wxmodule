@@ -6,6 +6,8 @@
 
 ![avatar](https://github.com/Takeos/wxmodule/blob/master/wxdemo3.gif)
 
+![avatar](https://github.com/Takeos/wxmodule/blob/master/wxdemo4.gif)
+
 # 倒计时。
 
 ## 调用组件
@@ -94,6 +96,52 @@
 | bindchange | 改变回调 | "" |
 
 >如果需要单选框的话，请在checkgroup设置type=”radio”
+
+# 弹出层组件
+## 调用
+
+>首先在app.js文件中引入dialog。
+
+```
+App({
+    Dialog : require('./pages/dialog/dialog.js')
+})
+```
+
+>在app.js中引入的目的是方便全局调用，你也可以单独在需要的页面中引入，如下：
+
+```
+var dialog= require('../dialog/dialog.js')
+```
+
+>然后我们到页面中加载组件，写入wxml任意位置。
+
+```
+<dialog id="dialog"></dialog>
+```
+
+>然后我们就可以使用组件了，如下：
+
+```
+app.Dialog('请输入用户名'); //默认
+app.Dialog('请输入用户名',2000); //2秒自动关闭
+app.Dialog('自定义样式',{ //全部参数如下
+    time : 2000, //自动关闭时间
+    maskClick : 1, //遮罩点击关闭，默认false
+    mask : 1, //是否显示遮罩，默认true
+    title : '我居中了', //title内容，不写不显示
+    titleCenter : 1, //title居中，默认false
+    style:'color:red; ', //内容追加css样式
+    button :{ //自定义按钮，不写不显示
+        确定(){
+           //to do
+        }
+    },
+    onClose(){
+        //关闭回调函数
+    }
+})
+```
 
 
 >组件怎么使用？将组件文件放在项目中。然后再需要引入的页面.json文件里添加如下内容，如果需要修改样式，颜色请自己修改…..

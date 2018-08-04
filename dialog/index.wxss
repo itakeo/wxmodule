@@ -1,0 +1,31 @@
+.c_alert_dialog { box-sizing: border-box; }
+.c_alert_dialog { -webkit-tap-highlight-color: rgba(0, 0, 0, 0); color: #111; position: fixed; left: 0px; top: 0px; z-index: 9999; width: 100%; height: 100%; visibility: hidden; display: flex;  align-items: center;  justify-content: center }
+.c_alert_mask { position: absolute; left: 0; top: 0px; width: 100%; height: 100%; z-index: 505; background: rgba(0, 0, 0, .78); opacity: 0; visibility: hidden; -webkit-transition: all .4s ease }
+.dialog_open .c_alert_mask { opacity: 1; visibility: initial }
+.c_alert_wrap { z-index: 1200; max-width: 400px; position: relative; background: #fff; height: auto; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 20px rgba(0, 0, 0, .15); font-size: 15px; opacity: 0;top: -10% }
+.c_alert_title { padding: 17px 14px 0 14px; line-height: 1; margin-bottom: -2px; text-align: left; font-weight: bold; font-size: 16px; position: relative }
+.c_alert_con { text-align: left; font-size: 15px; line-height: 1.5; color: #444; padding: 10px 14px }
+.c_alert_inner{background: rgba(0,0,0,.68);}
+.c_alert_inner .c_alert_con { color: #fff }
+.c_alert_inner + .c_alert_mask { opacity: 0 }
+.c_alert_title + .c_alert_con { padding: 18px 14px }
+.c_alert_btn { border-top: 1px solid #e7e7e7; overflow: hidden; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; -webkit-justify-content: center; justify-content: center }
+.c_alert_btn text { font-weight: bold; line-height: 1; text-align: center; color: #228BFE; text-decoration: none; display: block; padding: 14px 0; font-size: 16px; margin: 0; background: 0 0; border: none; border-radius: 0; letter-spacing: 1px; cursor: pointer; border-left: 1px solid #e7e7e7; width: 100%; transition: all .2s ease; }
+.c_alert_btn text:first-child { border-left: none }
+.c_alert_btn text:active { background: #eee }
+.dialog_open,.dialog_close{visibility: initial;}
+.dialog_open .c_alert_wrap, .dialog_close .c_alert_wrap { animation-duration: 0.4s;  animation-timing-function: ease; animation-fill-mode: forwards }
+.dialog_open .c_alert_wrap {  animation-name: anim-open }
+.dialog_close .c_alert_wrap { animation-name: anim-close;  animation-duration: 0.4s; animation-timing-function: ease }
+.c_alert_width.c_alert_wrap { width: 75% }
+@media screen and (max-width:800px) {
+	.c_alert_wrap { max-width: 75%; border-radius: 10px }
+}
+@keyframes anim-open {
+	0% { opacity: 0; transform: scale(1.2);}
+	100% { opacity: 1; transform: scale(1);}
+}
+@keyframes anim-close {
+	0% { opacity: 1 }
+	100% { opacity: 0; -webkit-transform: scale3d(1.1, 1.1, 1); }
+}

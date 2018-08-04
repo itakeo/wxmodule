@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="c_alert_dialog {{showDialog ? 'dialog_open' : ''}}  {{closeDialog ? 'dialog_close' : ''}}">
+	<view class="c_alert_wrap {{(title.length || button.length) ? 'c_alert_width' : 'c_alert_inner'}}">
+		<view class="c_alert_title" style="text-align: {{titleCenter ? 'center' : 'left'}}" wx:if="{{title.length}}">{{title}}</view>
+		<view class="c_alert_con" style="{{style}}">
+			{{content}}
+		</view>
+		<view class="c_alert_btn" wx:if="{{button.length}}">
+			<text wx:for="{{button}}" wx:key="{{index}}" data-index="{{index}}" bindtap="buttonFn">{{item.name}}</text>
+		</view>
+	</view>
+	<view class="c_alert_mask" catchtouchmove='move' wx:if="{{mask}}" bindtap="closeDialogFn"></view>
+</view>
