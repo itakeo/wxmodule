@@ -153,7 +153,8 @@ app.Dialog('自定义样式',{ //全部参数如下
         "countdown": "../countdown/index", //路径
         "inputnum": "../inputnum/index",
         "checkgroup": "../checkgroup/index",
-        "inputnum": "../inputnum/index"
+        "inputnum": "../inputnum/index",
+        "dialog": "../dialog/index"
     }
 }
 ```
