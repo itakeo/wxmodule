@@ -63,7 +63,7 @@
 | index | 索引值 | 0 |
 | position | 设置控件的对齐。left和right两种 | left |
 | color | 设置颜色 | #FA7346 |
-| algin | 设置文字的对齐方式。left和right两种 | left |
+| align | 设置文字的对齐方式。left和right两种 | left |
 | margin | 设置控件距离文字的边距	 | 0 20rpx 0 0 |
 | disabled | 禁止使用 | false |
 | checked | 是否选中 | 0 |
