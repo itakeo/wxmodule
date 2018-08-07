@@ -22,6 +22,7 @@
 | ------ | ------ | ------ |
 | time | 倒计时的时间，可传毫秒数，日期和数组 | 0 |
 | index | 索引值 | 0 |
+| format | 修改时间显示方法 | 时分秒 |
 | showDay | 是否显示天 | false |
 | showHour | 是否显示小时 | true |
 | showMin | 是否显示分钟 | true |
