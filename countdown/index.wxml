@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="countDownView"> 
-	<view wx:if="{{dayOff}}"><text>{{countTime.day}}</text>天</view>
-	<view wx:if="{{hourOff}}"><text>{{countTime.hour}}</text>时</view>
-	<view wx:if="{{minOff}}"><text>{{countTime.min}}</text>分</view>
-	<view wx:if="{{secOff}}"><text>{{countTime.sec}}</text>秒</view>
+	<view wx:if="{{dayOff}}"><text>{{countTime.day}}</text>{{format ? format :  '天'}}</view>
+	<view wx:if="{{hourOff}}"><text>{{countTime.hour}}</text>{{format ? format :  '时'}}</view>
+	<view wx:if="{{minOff}}"><text>{{countTime.min}}</text>{{format ? format :  '分'}}</view>
+	<view wx:if="{{secOff}}"><text>{{countTime.sec}}</text>{{format ? '' :  '秒'}}</view>
 </view>
 
