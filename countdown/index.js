@@ -11,6 +11,10 @@ Component({
                 });
             }
         },
+        format : {
+            type: null,
+            value:  '' 
+        },
         showHour : {
             type: null,
             value:  1 ,
