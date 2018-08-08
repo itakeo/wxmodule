@@ -5,7 +5,6 @@ Component({
             type: null,
             value:  0 ,
             observer(val) {
-                console.log(this.data)
                 this.setData({
                     dayOff : typeof val === 'string' ? JSON.parse(val) : val
                 });
