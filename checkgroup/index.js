@@ -1,7 +1,7 @@
 Component({
     behaviors: ['wx://form-field'],
     relations: {
-        '../checkList/index': {
+        '../checklist/index': {
             type: 'child',
             linked: function() {
                 //this.emitEvent();
@@ -22,7 +22,7 @@ Component({
     },
     methods : {
         emitEvent(val) {
-            const elements = this.getRelationNodes('../checkList/index');
+            const elements = this.getRelationNodes('../checklist/index');
             if (elements.length > 0) {
                 if(this.data.type=='radio'){
                     let _val = '',_index=0;
