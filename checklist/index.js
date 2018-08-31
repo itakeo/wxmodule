@@ -1,6 +1,6 @@
 Component({
     relations: {
-        '../checkGroup/index': {
+        '../checkgroup/index': {
             type: 'parent',
         }
     },
@@ -67,7 +67,7 @@ Component({
             this.triggerEvent('change',{value : this.data.value,check : this.data.checkedOff,index : this.data.index})
         },
         parentFn(){
-            const parent = this.getRelationNodes('../checkGroup/index')[0];
+            const parent = this.getRelationNodes('../checkgroup/index')[0];
             parent && parent.emitEvent(this.data.value)
         }
     },
